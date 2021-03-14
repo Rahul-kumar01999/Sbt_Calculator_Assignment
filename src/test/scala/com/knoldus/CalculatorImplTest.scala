@@ -1,3 +1,19 @@
+// Copyright (C) 2011-2012 the original author or authors.
+// See the LICENCE.txt file distributed with this work for additional
+// information regarding copyright ownership.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// scalastyle:off magic.number
 package com.knoldus
 
 import org.scalatest.flatspec.AnyFlatSpec
@@ -6,10 +22,8 @@ class CalculatorImplTest extends AnyFlatSpec {
 
   val calculator = new CalculatorImpl
 
-//Test Cases for all the combination of positive and negative numbers 
-
+//Test Cases for all the combination of positive and negative numbers
   //case for add() method
-
   "sum of 2 positive number " should "return positive result" in {
     assert(30 == calculator.add(15, 15))
   }
@@ -41,16 +55,16 @@ class CalculatorImplTest extends AnyFlatSpec {
 
   //cases for multiply() method
 
-  "multipication of 2 positive number " should "return positive ans" in {
+  "multiplication of 2 positive number " should "return positive ans" in {
     assert(30 == calculator.multiply(3, 10))
   }
 
- "multipication of positive and negative number " should "return negative ans" in {
+ "multiplication of positive and negative number " should "return negative ans" in {
     assert(-30 == calculator.multiply(3, -10))
   }
 
 
-  "multipication of 2 negative number " should "return positive ans" in  {
+  "multiplication of 2 negative number " should "return positive ans" in  {
     assert(30 == calculator.multiply(-3, -10))
   }
 
@@ -59,7 +73,7 @@ class CalculatorImplTest extends AnyFlatSpec {
    
   " division of 2 positive number " should "return positive ans " in {
     assert(10 == calculator.divide(30, 3))
-  } 
+  }
 
  " division of 2 negative number " should "return positive ans " in {
     assert(10 == calculator.divide(-30,-3))
@@ -71,7 +85,7 @@ class CalculatorImplTest extends AnyFlatSpec {
 
   it should " throw ArithmeticException when second number = 0 " in {
     val result = calculator.divide(30, 0)
-    assert(result == "ArithmeticException : cant divide by 0")
+    assert(result == "ArithmeticException : cannot divide by 0")
   }
 
   //cases for power method
@@ -112,7 +126,7 @@ class CalculatorImplTest extends AnyFlatSpec {
 
   it should " throw ArithmeticException when second number = 0" in {
     val output = calculator.modulus(10, 0)
-    assert(output == "ArithmeticException : cant divide by 0")
+    assert(output == "ArithmeticException : cannot divide by 0")
   }
 
 
